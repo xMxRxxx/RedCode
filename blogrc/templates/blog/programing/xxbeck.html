@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+</div>
+
+                    {% if data.has_other_pages %}
+  <ul class="pagination">
+    {% if data.has_previous %}
+      <li><a href="?page={{ data.previous_page_number }}">«</a></li>
+    {% else %}
+      <li class="disabled"><span>«</span></li>
+    {% endif %}
+    {% for i in data.paginator.page_range %}
+      {% if data.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if data.has_next %}
+      <li><a href="?page={{ data.next_page_number }}">»</a></li>
+    {% else %}
+      <li class="disabled"><span>»</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+                </div>
+{% for data in data %}
+                                    
+                                <li><a href="{% url 'detail_Project' data.sub_category data.slug %}"><i class="fas fa-angle-double-right"></i>{{data.title}}</a></li>
+                                {% endfor %}
+<div class="container">
+            <div class="row">
+                <div class="col-lg-9 order-lg-2 mb-30">
+                   <div class="breadcrumb-wrapper">
+                        <nav>
+                            <ul class="breadcrumb">
+                                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                                <li class="active">C PROGRAMING TUTORIAL</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="banner-img mt-30 mb-30">
+                        <a href="shop.html"><img src="{% static 'assets/img/banner/banner-gird.png'%}" alt=""></a>
+                    </div>
+                    <!-- content 1 -->
+                    <h1>JUDUL TEMA</h1>
+                   <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                       cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                   </div>
+                   <blockquote>
+                        <pre>
+                            <code>
+                                My pre-formatted "quoted" code here.
+                            </code>
+                        </pre>
+                    </blockquote>
+                   <!-- content 1 -->
+                   <h6>OUTPUT :</h6>
+                   <center><img src="{% static 'assets/img/banner/4img-home3.jpg'%}" alt="" class="center"> </center>
+                   <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                       cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                   </div>
+                   <blockquote>
+                        <pre>
+                            <code>
+                                My pre-formatted "quoted" code here.
+                            </code>
+                        </pre>
+                    </blockquote>
+                    <h6>OUTPUT :</h6>
+                   <!-- content 1 -->
+                   <center><img src="{% static 'assets/img/banner/4img-home3.jpg'%}" alt="" class="center"> </center>
+
+
+                   
+                  
+                   <div>
+                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                       cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                       proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                   </div>
+                   <center>
+                       <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                   </center>
+                   <br>
+                    <div class="paginaton d-flex justify-content-between">
+                        <div class="patination-content">
+                            <ul class="pagination">
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li class="pagination-next" id="pagination-next-bottom">
+                                    <a href="#"><i class="fas fa-angle-double-right"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="show-item">
+                            <p class="no-margin">Showing 1 - 10 of 10 items</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <!-- shopping area title -->
+                    <div class="sidebar-area-title mb-30">
+                            <a data-toggle="tooltip" title="LAPAKKITO" href="#"><img src="{% static 'assets/img/logo-footer.png'%}" alt=""></a>
+                    </div>
+                    <div class="shopping-left-side mb-30">
+                        <!-- category sidebar -->
+                        
+                        <!-- manufacture -->
+                        <div class="single-layout">
+                            <div class="layout-title">
+                                <h6>Manufacturer</h6>
+                            </div>
+                            <ul class="lay-out-list">
+                                <li><a href="#"><i class="fas fa-angle-double-right"></i>Adidas<span>(4)</span></a></li>
+                                <li><a href="#"><i class="fas fa-angle-double-right"></i>Chanel<span>(6)</span></a></li>
+                                <li><a href="#"><i class="fas fa-angle-double-right"></i>DKNY<span>(2)</span></a></li>
+                                <li><a href="#"><i class="fas fa-angle-double-right"></i>Dolce <span>(5)</span></a></li>
+                                <li><a href="#"><i class="fas fa-angle-double-right"></i>Gabbana <span>(3)</span></a></li>
+                                <li><a href="#"><i class="fas fa-angle-double-right"></i>Nike <span>(0)</span></a></li>
+                                <li><a href="#"><i class="fas fa-angle-double-right"></i>Vogue  <span>(1)</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- sidebar color -->
+                       
+                    </div>
+                    <div class="side-bar-compare">
+                        <div class="sidebar-area-title">
+                            <h6>Compare Products </h6>
+                        </div>
+                        <span>You have no items to compare.</span>
+                    </div>
+                    <div class="side-bar-tag">
+                        <div class="sidebar-area-title">
+                            <h6>Popular Tags</h6>
+                        </div>
+                        <ul class="tag-list mb-20 mt-20">
+                            <li><a href="#">Clothing</a></li>
+                            <li><a href="#">accessories</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Footwear</a></li>
+                            <li><a href="#">Fashion</a></li>
+                            <li><a href="#">Kid</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">women</a></li>
+                        </ul>
+                        <div class="tag-action">
+                            <a href="#" class="btn">View All Tag</a>
+                        </div>
+                    </div>
+                    <div class="banner-img mt-30 mb-30">
+                        <a href="shop.html"><img src="assets/img/banner/banner-left.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div></section>
+{% endblock content %}
