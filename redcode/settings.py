@@ -23,10 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#pr^81a@r2s)n)s@*zb$@7yrv2j^r*hvk(qtx9e$n0)p9eu&h_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+#for editing on local
+# DEBUG = True
+# ALLOWED_HOSTS = ['*']
+
+
+# for deploy
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['52.37.163.99','rkode.tk','www.rcode.tk']
+##############
 
 # Application definition
 
